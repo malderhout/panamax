@@ -1,0 +1,10 @@
+---
+name: tomcat
+description: ''
+keywords: ''
+type: Default
+documentation: ''
+images:
+- name: malderhout_tomcat_latest
+  source: malderhout/tomcat:latest
+  type: Default
