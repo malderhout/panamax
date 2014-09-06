@@ -1,10 +1,25 @@
 ---
 name: tomcat
-description: ''
-keywords: ''
-type: Default
-documentation: ''
+description: Tomcat7 with OpenJDK7 on CentOS7
+keywords: tomcat, tomcat7, centos7, openjdk7
+type: Java
+documentation: |-
+  Build:
+
+  docker build -t malderhout/tomcat .
+
+  Login:
+
+  docker run -i -t malderhout/tomcat /bin/bash
+
+  Run:
+
+  docker run -p 8080:8080 -d malderhout/tomcat
 images:
 - name: malderhout_tomcat_latest
   source: malderhout/tomcat:latest
   type: Default
+  ports:
+  - host_port: '8085'
+    container_port: '8080'
+    proto: TCP
